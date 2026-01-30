@@ -11,8 +11,10 @@ import { industryRoute } from "./dashboard/masterData/industry/industryRoute";
 import { industryCreateRoute } from "./dashboard/masterData/industry/industryCreateRoute";
 import { industryDetailsRoute } from "./dashboard/masterData/industry/industryDetailsRoute";
 import { masterDataRoute } from "./dashboard/masterData/masterDataRoute";
+import { indexRoute } from "./indexRoute";
 
 const routeTree = rootRoute.addChildren([
+  indexRoute,
   dashboardRoute.addChildren([
     leadsRoute,
     leadsCreateRoute,
