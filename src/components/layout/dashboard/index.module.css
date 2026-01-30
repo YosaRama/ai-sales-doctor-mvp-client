@@ -1,0 +1,38 @@
+.logo {
+  height: 48px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sider {
+  background: #fff;
+
+  :global(.ant-menu) {
+    padding: 0 16px;
+  }
+
+  ul {
+    background-color: #fff !important;
+  }
+
+  li {
+    background-color: #fff !important;
+    color: #000 !important;
+
+    > div {
+      color: #000 !important;
+    }
+  }
+
+  :global(.ant-menu-item-selected) {
+    background-color: orangered !important;
+    color: #fff !important;
+  }
+
+  :global(.ant-layout-sider-trigger) {
+    background-color: orangered !important;
+  }
+}
