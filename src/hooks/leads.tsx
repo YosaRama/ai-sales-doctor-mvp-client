@@ -115,7 +115,7 @@ export const useLead = (id: string) => {
   const { mutateAsync: onUpdate, isPending: onUpdateLoading } = useMutation({
     mutationFn: useCallback(
       async (payload: LeadPayloadUpdate) => {
-        return await axios.put(`${baseUrl}/${id}`, payload);
+        return await axios.put(`${baseUrl}${id}`, payload);
       },
       [id],
     ),
