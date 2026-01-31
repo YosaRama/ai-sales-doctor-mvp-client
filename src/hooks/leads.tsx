@@ -74,7 +74,7 @@ export const useLeads = ({
 
   const { mutateAsync: onDelete, isPending: onDeleteLoading } = useMutation({
     mutationFn: useCallback(async (payload: number) => {
-      return await axios.delete(`${baseUrl}/${payload}`);
+      return await axios.delete(`${baseUrl}${payload}`);
     }, []),
     onSuccess: (result) => {
       queryClient.invalidateQueries({ queryKey: [queryKey] });
@@ -106,7 +106,7 @@ export const useLead = (id: string) => {
   const { data: data, isLoading: fetchLoading } = useQuery({
     queryKey: [entity, id],
     queryFn: async () => {
-      const result = await axios.get(`${baseUrl}/${id}`);
+      const result = await axios.get(`${baseUrl}${id}`);
       console.log("result.data", result.data);
       return result.data as LeadDataModel;
     },
